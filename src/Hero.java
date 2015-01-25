@@ -1,4 +1,12 @@
+/**
+ * @author Brazen
+ *Hero Class of COMP1011 - Assignment 1.
+ *Generates a hero's abilities, determines if his/her hit
+ *attempt is successful, and calculates the damage dealt.
+ *@Modified January 25, 2015.
+ */
 
+//Variables Initiated
 public class Hero {
 	private int strength;
 	private int speed;
@@ -80,6 +88,7 @@ public class Hero {
 		System.out.println("Strength: " + strength);
 		System.out.println("Speed: " + speed);
 		System.out.println("Health: " + health);
+		System.out.println("------------------------");
 	}
 	
 	/**
@@ -89,7 +98,10 @@ public class Hero {
 	public void fight() {
 		hitAttempt();
 		if (hitAttempt() == true) {
-			hitDamage();
+			System.out.println("Target hit! " + name + " dealt " + hitDamage() + " damage.");
+		}
+		else {
+			System.out.println(name + " missed the target in a desperate and overambitious attempt.");
 		}
 	}	
 }
